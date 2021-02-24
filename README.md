@@ -28,8 +28,10 @@ let age = defaults.integer(forKey: "Age")
 let canNotify = defaults.bool(forKey: "CanSentNotification")
 let date = defaults.string(forKey: "userName")
 ```
-When retreving objects the result is **optional**, so we need to ***type-cast*** to a non-optional type and use a ~nil coalising~ operator to handle missing values.
+When retreving objects the result is **optional**, so we need to ***type-cast*** to a non-optional type and use a ***nil coalising*** operator to handle missing values.
 
 ```swift
 let savedArray = defaults.object(forKey: "Array") as? [String] ?? [String]()
 ```
+
+
