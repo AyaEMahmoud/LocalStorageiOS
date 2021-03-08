@@ -35,3 +35,19 @@ let savedArray = defaults.object(forKey: "Array") as? [String] ?? [String]()
 ```
 
 
+
+
+
+
+
+
+# How to store data on an iOS device using the core data framework.
+#### What is core data?
+Core data is an extremly powerful ***framework*** that abstracts much of the details of how and where the data is aculty stored, allowing the developer to focus on what you need to save.
+
+You can use the framework to: 
+- Store Data permently for offline use.
+- Cache temporary data.
+- Functionality like undos and redos.
+
+While the how of the framework works the same under the hood, it uses different format to achive that in **SwiftUI** Vs in **UIKit**.
