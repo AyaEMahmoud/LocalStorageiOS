@@ -51,3 +51,12 @@ You can use the framework to:
 - Functionality like undos and redos.
 
 While the how of the framework works the same under the hood, it uses different format to achive that in **SwiftUI** Vs in **UIKit**.
+
+
+
+
+
+
+
+## Core Data Fetch Request
+Fetch requests are represented by **NSFetchRequest** and it containts an entity discription and also optionaly sorting and filtring for retrived data.
