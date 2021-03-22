@@ -62,7 +62,7 @@ Core data mailny consists of an **Object Graph Mapper (OGM)** and a **Presistant
 Fetch requests are represented by **NSFetchRequest** and it containts an entity discription and also optionaly sorting and filtring for retrived data.
 - The object graph represents the different objects in the model layer and thier relationship to one another.
 
-![alt text](https://imgur.com/lrQajo4)
+![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F5897447%2Fdoes-coredata-allow-object-graph-loops-strange-error&psig=AOvVaw3U8Tgchbsl1H4OoMaNebXO&ust=1616488024665000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDBsJ69w-8CFQAAAAAdAAAAABAD)
 
 
 
