@@ -52,11 +52,29 @@ You can use the framework to:
 
 While the how of the framework works the same under the hood, it uses different format to achive that in **SwiftUI** Vs in **UIKit**.
 
-
-
+## A High level Overview of core data's parts
+Core data mailny consists of an **Object Graph Mapper (OGM)** and a **Presistant Store**.
 
 
 
 
 ## Core Data Fetch Request
 Fetch requests are represented by **NSFetchRequest** and it containts an entity discription and also optionaly sorting and filtring for retrived data.
+- The object graph represents the different objects in the model layer and thier relationship to one another.
+
+![alt text](https://imgur.com/a/KbRVqv4)
+
+
+
+
+
+
+
+
+# CoreData and UIKIT
+
+While all the fundementals are the same as coredata in SwiftUI, the syntax, helper classes and how they are used are different.
+- There's no Enviroment object in UIKIT, so we need to pass the mange object context manually whenever needed.
+- There're no property observers to handle fetch requests.
+- Unlike SwiftUI, the views wont be automatically updated when data in the preisitant store changes.
+
