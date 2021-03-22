@@ -59,12 +59,15 @@ Core data mailny consists of an **Object Graph Mapper (OGM)** and a **Presistant
 
 ![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.20.23%20AM.png)
 
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.20.23%20AM.png" width="100" height="50">
 
 Once you have instenses of these models, you'll need to save, update, or delete. 
 
 - The persistence framework provided by core data handels all of these operations.
 
-![alt text]()
+![alt text](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.29.15%20AM.png)
+
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.29.15%20AM.png" width="100" height="50">
 
 Each of the operations needed is generally delegated to a very spesific objects. All of these object are reffered to as the **Core Data Stack**. 
 
@@ -74,11 +77,54 @@ With core dara we don't use swift types to model the data insted we use a **Mana
 - Instead of being a spesific type a manged object is a sub class of **NSManagedObject** and it's more of a generic container to store data in.
 - Instead of creating objects direclty in code, core data provies a viual interface to define the types that you'll use to represent your data. These types are called **Entities**.
 
-![alt text]()
+![alt text](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.46.33%20AM.png)
+![alt text](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.54.50%20AM.png)
+
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.46.33%20AM.png" width="100" height="50">
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.54.50%20AM.png" width="100" height="50">
 
 #### Managed Object Context
 As you work with your app you'll need a way to keep track of all changes, this is where the next part of the stack comes in.
-The managed object context is an intellegent scratch pad, keeps track of all changes occuring in the object graph. 
+- The managed object context is an intellegent scratch pad, keeps track of all changes occuring in the object graph. 
+- The tracked changes are not presisted untill saved.
+- Managed object must be registered with a managed object context.
+- The context also tracks changes in relationshipd between all managed objects.
+- By tracking these changes the context is able to provied undos and redos automatically.
+- The managed object context is an instence of the **NSMAnagedObjectContext**
+
+***Context -> Recored of Changes -> Presistence Layer***
+
+- Also there can be more than one context in any app.
+
+
+![alt text](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.59.10%20AM.png)
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.59.10%20AM.png" width="100" height="50">
+
+
+#### The Presisetent Store Coordinator
+Sets in the middle of the stack between the the object graph and the presistence store and fcilitate communications between the two.
+It's an instance of the **NSPresistenceCoordinator**.
+
+
+![alt text](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2011.27.09%20AM.png)
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2011.27.09%20AM.png" width="100" height="50">
+
+
+While the context keeps track of the changes that occure on the models, it's the persistence coordinator that creates the actual instances of the models when need to be saved.
+
+![alt text](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%201.46.39%20PM.png)
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%201.46.39%20PM.png" width="100" height="50">
+
+
+Semilarly, if the user retrives the stored data, the persistence coordinator is responsible for retriving exsistance instences from a persistance store.
+
+
+![alt text](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%201.46.39%20PM.png)
+<img src="https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%201.46.39%20PM.pngg" width="100" height="50">
+
+
+
+
 
 
 ## Core Data Fetch Request
