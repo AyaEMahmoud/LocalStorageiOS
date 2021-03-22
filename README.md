@@ -57,7 +57,7 @@ Core data mailny consists of an **Object Graph Mapper (OGM)** and a **Presistant
 
 - The object graph represents the different objects in the model layer and thier relationship to one another and the rules of these relationships.
 
-![alt text]()
+![Screenshot](Screen Shot 2021-03-22 at 10.20.23 AM.png)
 
 
 Once you have instenses of these models, you'll need to save, update, or delete. 
