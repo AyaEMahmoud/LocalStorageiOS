@@ -57,19 +57,28 @@ Core data mailny consists of an **Object Graph Mapper (OGM)** and a **Presistant
 
 - The object graph represents the different objects in the model layer and thier relationship to one another and the rules of these relationships.
 
-![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F5897447%2Fdoes-coredata-allow-object-graph-loops-strange-error&psig=AOvVaw3U8Tgchbsl1H4OoMaNebXO&ust=1616488024665000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDBsJ69w-8CFQAAAAAdAAAAABAD)
+![alt text]()
 
 
 Once you have instenses of these models, you'll need to save, update, or delete. 
 
 - The persistence framework provided by core data handels all of these operations.
 
+![alt text]()
+
 Each of the operations needed is generally delegated to a very spesific objects. All of these object are reffered to as the **Core Data Stack**. 
 
-#### Manged Object
+#### Manged Object Model
 With core dara we don't use swift types to model the data insted we use a **Managed Object**
 - A managed object looks and feels like a swift class, but it's more of a representaion of the data in the presistance store.
-- Instead of being a spesific type a manged object is a sub class of **NSManagedObject**
+- Instead of being a spesific type a manged object is a sub class of **NSManagedObject** and it's more of a generic container to store data in.
+- Instead of creating objects direclty in code, core data provies a viual interface to define the types that you'll use to represent your data. These types are called **Entities**.
+
+![alt text]()
+
+#### Managed Object Context
+As you work with your app you'll need a way to keep track of all changes, this is where the next part of the stack comes in.
+The managed object context is an intellegent scratch pad, keeps track of all changes occuring in the object graph. 
 
 
 ## Core Data Fetch Request
