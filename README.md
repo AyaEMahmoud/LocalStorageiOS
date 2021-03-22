@@ -62,7 +62,7 @@ Core data mailny consists of an **Object Graph Mapper (OGM)** and a **Presistant
 Fetch requests are represented by **NSFetchRequest** and it containts an entity discription and also optionaly sorting and filtring for retrived data.
 - The object graph represents the different objects in the model layer and thier relationship to one another.
 
-![alt text](https://imgur.com/a/KbRVqv4)
+![alt text](https://imgur.com/lrQajo4)
 
 
 
