@@ -115,8 +115,21 @@ Similarly, if the user retrieves the stored data, the persistence coordinator is
 ![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%201.46.39%20PM.png)
 
 
+#### Persistent Conttainer
+Is not a part of the core data stack, but it creates the stack with minimal code. In the app delegate file writing this bit of code creates the core data stack.
+Since it's a **lazy** var it's only initialized when it's accessed for the first time.
 
-
+```Swift
+  lazy var persistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "Name of your data model file")
+    container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+      if let error = error as NSError? {
+        fatalError("Unresolved error \(error), \(error.userInfo)")
+      }
+    })
+    return container
+  }()
+```
 
 
 ## Core Data Fetch Request
