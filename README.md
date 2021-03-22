@@ -55,16 +55,25 @@ While the how of the framework works the same under the hood, it uses different 
 ## A High level Overview of core data's parts
 Core data mailny consists of an **Object Graph Mapper (OGM)** and a **Presistant Store**.
 
-
-
-
-## Core Data Fetch Request
-Fetch requests are represented by **NSFetchRequest** and it containts an entity discription and also optionaly sorting and filtring for retrived data.
-- The object graph represents the different objects in the model layer and thier relationship to one another.
+- The object graph represents the different objects in the model layer and thier relationship to one another and the rules of these relationships.
 
 ![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F5897447%2Fdoes-coredata-allow-object-graph-loops-strange-error&psig=AOvVaw3U8Tgchbsl1H4OoMaNebXO&ust=1616488024665000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDBsJ69w-8CFQAAAAAdAAAAABAD)
 
 
+Once you have instenses of these models, you'll need to save, update, or delete. 
+
+- The persistence framework provided by core data handels all of these operations.
+
+Each of the operations needed is generally delegated to a very spesific objects. All of these object are reffered to as the **Core Data Stack**. 
+
+#### Manged Object
+With core dara we don't use swift types to model the data insted we use a **Managed Object**
+- A managed object looks and feels like a swift class, but it's more of a representaion of the data in the presistance store.
+- Instead of being a spesific type a manged object is a sub class of **NSManagedObject**
+
+
+## Core Data Fetch Request
+Fetch requests are represented by **NSFetchRequest** and it containts an entity discription and also optionaly sorting and filtring for retrived data.
 
 
 
