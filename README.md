@@ -40,7 +40,8 @@ let savedArray = defaults.object(forKey: "Array") as? [String] ?? [String]()
 
 
 
-
+The following part is based on the *Beginning Core Data Course* By *raywenderlich.com*. All used photos are provided by the course.
+Course link: 
 # How to store data on an iOS device using the core data framework.
 #### What is core data?
 Core Data is an extremely powerful ***framework*** that abstracts much of the details of how and where the data is actually stored, allowing the developer to focus on what you need to save.
