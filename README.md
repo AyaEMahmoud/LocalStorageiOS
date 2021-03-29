@@ -134,6 +134,7 @@ Since it's a **lazy** var it's only initialized when it's accessed for the first
 
 
 ## Core Data Fetch Request
+Core data retrives records from the data store by means of fetch requests.
 Fetch requests are represented by **NSFetchRequest** and it contains an entity description and also optionally sorting and filtring for retrieved data.
 
 
