@@ -142,11 +142,22 @@ Fetch requests are represented by **NSFetchRequest** and it contains an entity d
 
 
 
-# CoreData and UIKIT
+# Realm in iOS
 
-While all the fundamentals are the same as core data in SwiftUI, the syntax, helper classes, and how they are used are different.
-- There's no Environment object in UIKIT, so we need to pass the mange object context manually whenever needed.
-- There're no property observers to handle fetch requests.
-- Unlike SwiftUI, the views won’t be automatically updated when data in the president store changes.
+Realm has 2 products 
+### Realm mobile database 
+Free open-source mobile database that thousadns of apps relay on everyday. 
+### Realm mobile plateform 
+Platform that allows sync between devices, if you have a database on your iOS app, and have a database on your adnroid app,
+you can sync the data using the /*realm object server*/ which is a part of the realm mobile platform.
 
+The platform comes with a free tier for small apps, and a bussiness tier for large apps with big requirements. 
 
+## Realm database
+Realm, unlike core data, doesn't use any intermediate query language, like sql.
+So the objects used in the app, along with any relations they may have to other objects, are written to desk exactly as they are.
+And whenever you want that data back, you get the same objects that you written.
+
+![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-09-05%20at%2012.51.39%20PM.png)
+
+No intermediate formatting, or queries needed.
