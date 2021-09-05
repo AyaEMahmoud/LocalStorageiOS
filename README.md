@@ -139,25 +139,47 @@ Fetch requests are represented by **NSFetchRequest** and it contains an entity d
 
 
 
-
-
-
 # Realm in iOS
 
 Realm has 2 products 
 ### Realm mobile database 
-Free open-source mobile database that thousadns of apps relay on everyday. 
+Free open-source mobile database that thousands of apps rely on every day. 
 ### Realm mobile plateform 
-Platform that allows sync between devices, if you have a database on your iOS app, and have a database on your adnroid app,
+A platform that allows sync between devices, if you have a database on your iOS app, and have a database on your android app,
 you can sync the data using the /*realm object server*/ which is a part of the realm mobile platform.
 
-The platform comes with a free tier for small apps, and a bussiness tier for large apps with big requirements. 
+The platform comes with a free tier for small apps, and a business tier for large apps with big requirements. 
 
 ## Realm database
-Realm, unlike core data, doesn't use any intermediate query language, like sql.
-So the objects used in the app, along with any relations they may have to other objects, are written to desk exactly as they are.
-And whenever you want that data back, you get the same objects that you written.
+Realm, unlike core data, doesn't use any intermediate query language, like SQL.
+So the objects used in the app, along with any relations they may have to other objects, are written to the desk exactly as they are.
+And whenever you want that data back, you get the same objects that you wrote.
 
 ![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-09-05%20at%2012.51.39%20PM.png)
 
-No intermediate formatting, or queries needed.
+No intermediate formatting or queries are needed.
+
+![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-09-05%20at%201.22.30%20PM.png)
+
+In realm, the class just inheriting from an object adds the ability to be persisted on the desk, so you don't need to add any methods to do that.
+Just focus on adding the data properties that need to be persisted.
+
+Properties can have default values as well as optional values.
+
+![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-09-05%20at%201.24.54%20PM.png)
+
+Of course, not any type can be persisted in realm
+
+If we add a default value to a primitive type like **(Int, Double, Bool, and Float)** we must add dynamic keyword before them,
+and realm will take care of the rest.
+
+If not, the type must be defined as a **RealmOptional** type
+
+For object types like **(String, date, and data)** we just need to declare them as dynamic.
+
+Finally, we can have properties like other realm objects or a list of realm objects.
+
+![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-09-05%20at%201.32.45%20PM.png)
+
+The model classes can provide some realm meta information like a primary key by overriding the methods.
+
