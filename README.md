@@ -76,7 +76,6 @@ With core data we don't use swift types to model the data instead we use a **Man
 - Instead of being a specific type a managed object is a subclass of **NSManagedObject** and it's more of a generic container to store data in.
 - Instead of creating objects directly in code, core data provides a visual interface to define the types that you'll use to represent your data. These types are called **Entities**.
 
-![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.46.33%20AM.png)
 ![Screenshot](https://github.com/AyaEMahmoud/LocalStorageiOS/blob/main/Screen%20Shot%202021-03-22%20at%2010.54.50%20AM.png)
 
 Once you have instances of these models, you'll need to save, update, or delete them. 
