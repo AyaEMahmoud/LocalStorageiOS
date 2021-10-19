@@ -3,9 +3,9 @@
 
 ## User Defaults
 #### What is user defaults?
-
+An interface to the user’s defaults database.
 This is the most common and the most comfortable way to store and retrieve information. UserDefaults work as a key-value storage, with Strings as keys. 
-An interface to the user’s defaults database, where you store key-value pairs persistently across launches of your app.
+
 The value parameter can be only property list objects: **NSData, NSString, NSNumber, NSDate, NSArray, or NSDictionary**. For NSArray and NSDictionary objects, their contents must be property list objects.
 
 #### How is it used?
