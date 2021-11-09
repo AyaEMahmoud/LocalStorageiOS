@@ -146,7 +146,8 @@ Fetch requests are represented by **NSFetchRequest** and it contains an entity d
 
 
 ## Keychain Services API 
-**This part is base on a medium tutorial at https://medium.com/ios-os-x-development/securing-user-data-with-keychain-for-ios-e720e0f9a8e2**
+**This part is base on a medium tutorial at
+https://medium.com/ios-os-x-development/securing-user-data-with-keychain-for-ios-e720e0f9a8e2**
 #### What is Keychain Services API?
 
 A keychain is defined in Apple’s documentation as:
@@ -172,7 +173,8 @@ Other wrappers exist as Cocoapods or extension libraries on Github and other dep
 
 Here are a few Keychain wrappers I recommend:
 
-SwiftKeychainWrapper by **Jason Rendel(jrendel) for Swift. https://cocoapods.org/pods/SwiftKeychainWrapper** or **https://github.com/jrendel/SwiftKeychainWrapper**
+SwiftKeychainWrapper by **Jason Rendel(jrendel) for Swift. https://cocoapods.org/pods/SwiftKeychainWrapper** 
+or **https://github.com/jrendel/SwiftKeychainWrapper**
 SAMKeychain by Sam Soffes for Objective C. **https://cocoapods.org/pods/SAMKeychain**
 Locksmith by Matthew Palmer for Swift. (Check out the video tutorial) **https://github.com/matthewpalmer/Locksmith**
 
