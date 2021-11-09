@@ -146,6 +146,7 @@ Fetch requests are represented by **NSFetchRequest** and it contains an entity d
 
 
 ## Keychain Services API 
+**This part is base on a medium tutorial at https://medium.com/ios-os-x-development/securing-user-data-with-keychain-for-ios-e720e0f9a8e2**
 #### What is Keychain Services API?
 
 A keychain is defined in Apple’s documentation as:
