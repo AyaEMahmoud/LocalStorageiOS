@@ -145,3 +145,34 @@ Core data retrives records from the data store by means of fetch requests.
 Fetch requests are represented by **NSFetchRequest** and it contains an entity description and also optionally sorting and filtring for retrieved data.
 
 
+## Keychain Services API 
+#### What is Keychain Services API?
+
+A keychain is defined in Apple’s documentation as:
+
+“…an encrypted container that securely stores small chunks of data on behalf of apps and secure services.”
+
+Keychain offers a secure alternative to saving sensitive data, such as user names and passwords, with NSUserDefaults, plist or similar methods.
+
+As you might already know, NSUserDefaults is simple and effective for saving small, simple bits of data, like NSNumbers or NSStrings, to your device’s file system. But this data is in no way stored securely as hackers can access it pretty easily from the device.
+
+Apple has provided the Keychain Services API to deal with this problem and help developers build apps that safely handle passwords and other sensitive information.
+
+Keychain is great because data encryption automatically is taken care of before it is stored in the file system so there is no need to waste time building encryption algorithms.
+
+A keychain in both OS and iOS can be configured to lock. When locked it is impossible to access and decrypt stored keychain items. For iOS the keychain is locked when the device is locked and unlocked when the device is unlocked. Even when it is unlocked, only apps that have created an item can access it, unless configured otherwise.
+
+#### Implementing the Keychain API
+Storing and retrieving data directly with Keychain is not an easy task. Unfortunately, the Keychain API is a bit torturous to use. It is written in C and requires a lot of time-consuming configuration. Luckily, Apple and many other contributors have created higher level wrappers to hide the convoluted C code and organization powering things from beneath.
+
+#### Implementation with Wrappers
+Apple’s own Keychain wrapper is called GenericKeychain and is available within the sample code in both Objective C and Swift.
+Other wrappers exist as Cocoapods or extension libraries on Github and other dependency management sites.
+
+Here are a few Keychain wrappers I recommend:
+
+SwiftKeychainWrapper by **Jason Rendel(jrendel) for Swift. https://cocoapods.org/pods/SwiftKeychainWrapper** or **https://github.com/jrendel/SwiftKeychainWrapper**
+SAMKeychain by Sam Soffes for Objective C. **https://cocoapods.org/pods/SAMKeychain**
+Locksmith by Matthew Palmer for Swift. (Check out the video tutorial) **https://github.com/matthewpalmer/Locksmith**
+
+Most wrappers include three methods: one to **add** a keychain item, one to **edit** a keychain item, and one to **delete** it, and make accessing and editing keychain items possible with one line of code.
