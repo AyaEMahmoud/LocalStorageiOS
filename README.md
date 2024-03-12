@@ -49,7 +49,7 @@ Despite that, it is fairly easy to create a small extension to support the store
 As the name implies, we should use UserDefaults to store the user’s preferences. We should use it to store small tidbits of information (e.g. whether the user prefers light or dark mode, at what time they want to receive a daily reminder, whether they actually want to receive notifications, etc.).
 As a rule of thumb, if you have a Settings screen in your app, UserDefaults are a good fit. As it needs to load up the entire file to retive data which can affect the time consumed and the app effecincy, and that's why it doesn't accept *custom datatypes*, only *standard datatypes*.
 
-To print the filePath which is saved with the userDefaults plist ```swift print(NSSearchPathForDirectoriesInDomains(.userDirectory, .userDomainMask, true).last! as String)```
+To print the filePath which is saved with the userDefaults plist ```print(NSSearchPathForDirectoriesInDomains(.userDirectory, .userDomainMask, true).last! as String)```
 
 The following part is based on the *Beginning Core Data Course* By *raywenderlich.com*. All used photos are provided by the course.
 Course link: 
